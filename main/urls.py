@@ -1,10 +1,11 @@
-from django.urls import path, re_path
-from . import views
-
+from django.urls import path
+from .views import *
 
 urlpatterns = [
-    path('', views.index, name='home_page'),
-    path('products/', views.products, name='products'),
-    path('about_us/', views.about_us, name='about_us'),
-    path('add/', views.add_goods, name='add'),
+    path('', HomeGoods.as_view(), name='home_page'),
+    path('products/', products, name='products'),
+    path('about_us/', about_us, name='about_us'),
+    path('add/', add_goods, name='add'),
 ]
+
+handler404 = 'main.views.page_not_found'
