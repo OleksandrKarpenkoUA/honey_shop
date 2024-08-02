@@ -6,10 +6,13 @@
 <main>
     <section class="product-list">
         {% for product in goods %}
-        <article class='product'>
-            <h2>{{ product.goods_title }}</h2>
+        <article class="product">
+            <h2>{{ product.title }}</h2>
             <p>{{ product.description }}</p>
             <p>Price: ${{ product.price }}</p>
+            {% if product.image %}
+                <img src="{{ product.image.url }}" alt="{{ product.title }}">
+            {% endif %}
             <button>Add to Cart</button>
         </article>
         {% endfor %}

@@ -1,14 +1,8 @@
 from django.shortcuts import redirect, render
-from django.http import HttpResponse
 from .forms import GoodsForm
 from django.views.generic import ListView
 from .models import Goods
 
-categories = [
-    {'id': 1, 'goods': 'Pure Honey', 'description': '500g of pure, organic honey.', 'product_url': 'main/images/honey1.jpg'},
-    {'id': 2, 'goods': 'Flavored Honey', 'description': '500g of honey with natural flavors.', 'product_url': 'main/images/honey2.jpg'},
-    {'id': 3, 'goods': 'Honeycomb', 'description': '250g of fresh honeycomb.', 'product_url': 'main/images/honey3.jpg'}
-]
 
 class HomeGoods(ListView):
     model = Goods
