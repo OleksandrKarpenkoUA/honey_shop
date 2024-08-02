@@ -2,6 +2,7 @@ from django.shortcuts import redirect, render
 from .forms import GoodsForm
 from django.views.generic import ListView
 from .models import Goods
+from utils import MyMixin
 
 
 class HomeGoods(ListView):
