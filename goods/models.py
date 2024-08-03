@@ -1,18 +1,28 @@
 from django.db import models
 
-class Goods(models.Model):
-    title = models.CharField(max_length=155, default='Honey')
-    description = models.TextField(max_length=255)
-    price = models.DecimalField(max_digits=10, decimal_places=2)
-    image = models.ImageField()
-    time_create = models.DateTimeField(auto_now_add=True)
-    time_update = models.DateTimeField(auto_now=True)
-    is_published = models.BooleanField(default=True)
-    views = models.IntegerField(default=0)
+
+
+class Categories(models.Model):
+    name = models.CharField(max_length=150, unique=True, verbose_name='Name')
+    slug = models.SlugField(max_length=200, unique=True, blank=True, null=True, verbose_name='URL')
     
     class Meta:
-        verbose_name = 'Goods'
-        verbose_name_plural = 'Goods'
+        db_table = 'category'
+        verbose_name = 'Category'
+        verbose_name_plural = 'Categories'
+    
         
-    def __str__(self):
-        return self.title
+class Products(models.Model):
+    name = models.CharField(max_length=150, unique=True, verbose_name='Name')
+    slug = models.SlugField(max_length=200, unique=True, blank=True, null=True, verbose_name='URL')
+    description = models.TextField(blank=True, null=True, verbose_name='Description')
+    image = models.ImageField(upload_to='goods_images', blank=True, null=True, verbose_name='Image')
+    price = models.DecimalField(default=0.00, max_digits=7, decimal_places=2, verbose_name='Price')
+    discount = models.DecimalField(default=0.00, max_digits=7, decimal_places=2, verbose_name='Discount %')
+    quantity = models.PositiveIntegerField(default=0, verbose_name="Quantity")
+    category = models.ForeignKey(to=Categories, on_delete=models.CASCADE, verbose_name='Category')
+    
+    class Meta:
+        db_table = 'product'
+        verbose_name = 'Product'
+        verbose_name_plural = 'Products'
