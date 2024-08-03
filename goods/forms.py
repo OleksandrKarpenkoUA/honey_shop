@@ -1,6 +1,6 @@
 from django import forms
-from .models import Goods
 import re
+from goods.models import Goods
 from django.core.exceptions import ValidationError
 
 class GoodsForm(forms.ModelForm):

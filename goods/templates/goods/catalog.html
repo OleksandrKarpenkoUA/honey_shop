@@ -1,0 +1,39 @@
+{% extends "main/base.html" %}
+{% load static %}
+
+
+{% block title %}
+Catalog - Honey Shop
+{% endblock %}
+
+{% block main %}
+<section>
+    <h2>Our Products</h2>
+    <div class="product-container">
+        <!-- Product 1 -->
+        <div class="product">
+            <img src="#" alt="Flower Honey">
+            <h3>Flower Honey</h3>
+            <p>Flower honey is a sweet and fragrant honey made from the nectar of various flowers. It is perfect for sweetening teas, spreading on toast, or adding to recipes.</p>
+            <p><strong>Price:</strong> $10.00</p>
+            <button>Add to Cart</button>
+        </div>
+        <!-- Product 2 -->
+        <div class="product">
+            <img src="#" alt="Rapeseed Honey">
+            <h3>Rapeseed Honey</h3>
+            <p>Rapeseed honey is known for its creamy texture and mild flavor. It is excellent for baking, cooking, or simply enjoying on its own.</p>
+            <p><strong>Price:</strong> $12.00</p>
+            <button>Add to Cart</button>
+        </div>
+        <!-- Product 3 -->
+        <div class="product">
+            <img src="#" alt="Lime Honey">
+            <h3>Lime Honey</h3>
+            <p>Lime honey has a distinctive taste and aroma, derived from the blossoms of lime trees. It is highly valued for its medicinal properties and rich flavor.</p>
+            <p><strong>Price:</strong> $15.00</p>
+            <button>Add to Cart</button>
+        </div>
+    </div>
+</section>
+{% endblock %}

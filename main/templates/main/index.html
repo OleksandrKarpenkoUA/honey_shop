@@ -1,6 +1,6 @@
 {% extends "main/base.html" %}
 
-{% block title %}Home - Honey Shop{% endblock %}
+{% block title %}Honey Shop{% endblock %}
 
 {% block main %}
 <main>
@@ -8,19 +8,5 @@
         <h2>Why Buy Honey?</h2>
         <p>Honey is a delicious and natural sweetener that has been enjoyed for thousands of years. It's not only a tasty addition to your meals and beverages but also offers a range of health benefits. Honey is rich in antioxidants, has antibacterial properties, and can help soothe a sore throat. It's a versatile ingredient that can be used in cooking, baking, and even in skincare routines. By buying honey, you support local beekeepers and contribute to the sustainability of our ecosystems. Discover the magic of honey and make it a staple in your pantry!</p>
     </section>
-
-    {% if products %}
-        <h2>Our Best Honey</h2>
-        <div class="product-list">
-            {% for product in products %}
-                <div class="product-item">
-                    <h3>{{ product.goods_title }}</h3>
-                    <p>{{ product.description }}</p>
-                    <p>Price: ${{ product.price }}</p>
-                    <p>Published: {{ product.is_published }}</p>
-                </div>
-            {% endfor %}
-        </div>
-    {% endif %}
 </main>
 {% endblock %}

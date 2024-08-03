@@ -1,11 +1,9 @@
-/* Reset some default styles */
 body, h1, h2, p, ul, li {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Basic styling for the body */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -15,7 +13,6 @@ body {
     margin: 0;
 }
 
-/* Header styling */
 header {
     background: #333;
     color: #fff;
@@ -45,7 +42,6 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
-/* Main content styling */
 main {
     padding: 20px;
 }
@@ -93,7 +89,6 @@ main {
     background: #555;
 }
 
-/* Footer styling */
 footer {
     background: #333;
     color: #fff;
