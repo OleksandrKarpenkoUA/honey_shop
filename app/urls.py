@@ -4,12 +4,11 @@ from django.contrib import admin
 from django.urls import path, include
 from main.views import page_not_found
 
-from main import views
 
 urlpatterns = [
     path('admin/', admin.site.urls, name='admin'),
-    path('', views.index, name='index'), 
-    path('about/', views.about, name='about'),
+    path('', include('main.urls', namespace='main')),
+    path('catalog/', include('goods.urls', namespace='goods')),
 ]
 
 handler404 = page_not_found
