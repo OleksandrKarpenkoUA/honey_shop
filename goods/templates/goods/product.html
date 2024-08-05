@@ -1,2 +1,19 @@
-{% extends 'main/base.html' %}
-{% load static %}
+{% extends 'base.html' %}
+
+{% block main %}
+<section>
+    <h1>{{ category.name }}</h1>
+    <ul>
+        {% for product in products %}
+        <li>
+            <h2>{{ product.name }}</h2>
+            <p>{{ product.description }}</p>
+            <p>Price: ${{ product.price }}</p>
+            <p>Discount: {{ product.discount }}%</p>
+            <p>Quantity: {{ product.quantity }}</p>
+        </li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'goods:catalog' %}">Back to Catalog</a>
+</section>
+{% endblock %}
