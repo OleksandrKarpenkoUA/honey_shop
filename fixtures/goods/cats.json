@@ -1,0 +1,26 @@
+[
+    {
+        "model": "goods.categories",
+        "pk": 3,
+        "fields": {
+            "name": "Honey Products",
+            "slug": "honey-products"
+        }
+    },
+    {
+        "model": "goods.categories",
+        "pk": 4,
+        "fields": {
+            "name": "Beekeeping Tools",
+            "slug": "beekeeping-tools"
+        }
+    },
+    {
+        "model": "goods.categories",
+        "pk": 5,
+        "fields": {
+            "name": "Beekeeping Equipment",
+            "slug": "beekeeping-equipment"
+        }
+    }
+]

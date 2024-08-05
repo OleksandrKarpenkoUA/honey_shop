@@ -1,0 +1,44 @@
+[
+    {
+        "model": "goods.products",
+        "pk": 1,
+        "fields": {
+            "name": "Wildflower Honey",
+            "slug": "wildflower-honey",
+            "description": "Premium Wildflower Honey, collected from the finest wildflowers, offering a rich and complex flavor",
+            "image": "",
+            "price": "15.99",
+            "discount": "0.00",
+            "quantity": 0,
+            "category": 3
+        }
+    },
+    {
+        "model": "goods.products",
+        "pk": 2,
+        "fields": {
+            "name": "Organic Acacia Honey",
+            "slug": "organic-acacia-honey",
+            "description": "100% Organic Acacia Honey, known for its light color and delicate taste, perfect for sweetening teas and desserts.",
+            "image": "",
+            "price": "18.99",
+            "discount": "0.00",
+            "quantity": 0,
+            "category": 3
+        }
+    },
+    {
+        "model": "goods.products",
+        "pk": 3,
+        "fields": {
+            "name": "Raw Clover Honey",
+            "slug": "raw-clover-honey",
+            "description": "Raw Clover Honey, unfiltered and unpasteurized, preserving all the natural enzymes and nutrients.",
+            "image": "",
+            "price": "13.99",
+            "discount": "0.00",
+            "quantity": 0,
+            "category": 3
+        }
+    }
+]
