@@ -1,10 +1,17 @@
 {% extends 'main/base.html' %}
 
-{% block main %}
-<section>
-    <h1>Catalog - Honey Shop</h1>
-    <ul>
-        
-    </ul>
-</section>
+{% block title %}Catalog - Honey Shop{% endblock %}
+
+{% block header %}
+<header>
+    <h1>Welcome to the Honey Shop Catalog</h1>
+    <nav>
+        <ul>
+            <li><a href="{% url 'main:index' %}">Home</a></li>
+            <li><a href="{% url "goods:catalog" %}">Catalog</a></li>    
+            <li><a href="{% url "main:about" %}">About Us</a></li>
+            <li><a href="{% url "main:contact" %}">Contact</a></li>
+        </ul>
+    </nav>
+</header>
 {% endblock %}

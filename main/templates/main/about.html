@@ -2,6 +2,20 @@
 
 {% block title %}About Us - Honey Shop{% endblock %}
 
+{% block header %}
+    <header>
+        <h1>About us</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'main:index' %}">Home</a></li>
+                <li><a href="{% url "goods:catalog" %}">Catalog</a></li>    
+                <li><a href="{% url "main:about" %}">About Us</a></li>
+                <li><a href="{% url "main:contact" %}">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    {% endblock %}
+
 {% block main %}
 <main>
     <section>
